@@ -1,0 +1,124 @@
+/*
+  Button background color I'll use later:
+  #22253e
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  align-items: center;
+  background: #f4f7ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  background: #22253e;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  padding-right: 24px;
+  position: relative;
+  text-align: center;
+  transition-property: background;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+
+
+  width: 120px;
+}
+
+
+.button:hover {
+  background: #303457;
+}
+
+.button:active {
+  background: #828ce4;
+  transition: none;
+}
+
+.button:hover .arrow {
+  right: 14px;
+
+}
+
+.arrow {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right 300ms ease;
+  /* transition-property: right;
+  transition-duration: 300ms;
+  transition-timing-function: ease; */
+  width: 18px;
+
+  
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+
+  30% {
+    transform: translateY(-14px);
+  }
+
+  60% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+
+.circle {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease ;
+  background: #22253e;
+  border-radius: 50%;
+  display: inline-block ;
+  height: 8px;
+  margin: 5px;
+  width: 8px;
+}
+
+.circle-1 {
+animation-delay: 0;
+}
+
+.circle-2 {
+  animation-delay: .33s;
+
+}
+
+.circle-3 {
+  animation-delay: .66s;
+
+}
